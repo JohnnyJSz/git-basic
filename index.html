@@ -1,40 +1,112 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Git Basics</title>
-    </head>
-    <body>
-        <h1>Git Crash Course</h1>
-        <h2>FreeCodeCamp & Gwen Faraday</h2>
-        <article>
-            <h3>What is Git?</h3>
-            <p>A free and open source version control system.</p>
-        </article>
-        <article>
-            <h3>What is Version Control System?</h3>
-            <p>The management of changes to documents, computer programs, large web sites and other collections of information.</p>
-        </article>
-        <article>
-            <h3>Terms.</h3>
-            <ul>
-                <li><p>Directory: Folder</p></li>
-                <li><p>Terminal or Command Line: Interface for text commands</p></li>
-                <li><p>CLI: Command Line Interface</p></li>
-                <li><p>cd: Change Directory</p></li>
-                <li><p>Code Editor: Word processor for writing code</p></li>
-                <li><p>Repository: Project, or the folder/place where your projects are kept</p></li>
-                <li><p>GitHub: A website to host your repositories online.</p></li>
-            </ul>
-        </article>
-        <article>
-            <h3>Some Git Commands</h3>
-            <ul>
-                <li><p>clone -- Bring a repository that is hosted somewhere like GitHub into a folder on your local machine.</p></li>
-                <li><p>add -- Track your files and changes in Git.</p></li>
-                <li><p>commit -- Save your files in Git.</p></li>
-                <li><p>push -- upload Git commits to a remote repository, like GitHub</p></li>
-                <li><p>pull -- Download changes from remote repository to your local machine, the opposite of push</p></li>
-            </ul>
-        </article>
-    </body>
+
+<head>
+    <title>Git Basics</title>
+</head>
+
+<body>
+    <h1>Git & GitHub Crash Course</h1>
+    <h2>FreeCodeCamp & Gwen Faraday</h2>
+    <hr>
+    <article>
+        <h3>What is Git?</h3>
+        <p>A free and open source version control system.</p>
+    </article>
+    <hr>
+    <article>
+        <h3>What is Version Control System?</h3>
+        <p>The management of changes to documents, computer programs, large web sites and other collections of
+            information.</p>
+    </article>
+    <hr>
+    <article>
+        <h3>Terms</h3>
+        <ul>
+            <li>
+                <p>Directory: Folder</p>
+            </li>
+            <li>
+                <p>Terminal or Command Line: Interface for text commands</p>
+            </li>
+            <li>
+                <p>CLI: Command Line Interface</p>
+            </li>
+            <li>
+                <p>cd: Change Directory</p>
+            </li>
+            <li>
+                <p>Code Editor: Word processor for writing code</p>
+            </li>
+            <li>
+                <p>Repository: Project, or the folder/place where your projects are kept</p>
+            </li>
+            <li>
+                <p>GitHub: A website to host your repositories online.</p>
+            </li>
+        </ul>
+    </article>
+    <hr>
+    <article>
+        <h3>Some Git Commands</h3>
+        <ul>
+            <li>
+                <p>clone -- Bring a repository that is hosted somewhere like GitHub into a folder on your local machine.
+                </p>
+                <p><i>git clone git@github.com/user/repo_example.git</i></p>
+            </li>
+            <li>
+                <p>status -- Shows all the files that were updated, created or deleted but haven't been saved in a commit yet.</p>
+                <p><i>git status</i></p>
+            </li>
+            <li>
+                <p>add -- Track your files and changes before we can save it to Git, we have to tell it which files we want to track</p>
+                <p><i>git add file_name / git add .</i></p>
+            </li>
+            <li>
+                <p>commit -- Save your files locally, the commit it's not live in GitHub, to do so we use <i>git push</i></p>
+                <p><i>git commit -m 'commit title' -m 'commit description'</i></p>
+            </li>
+            <li>
+                <p>push -- upload Git commits to a remote repository, like GitHub</p>
+                <p><i>git push origin master</i></p>
+                <ul>
+                    <li><p><i>origin</i> - the location of our Git repository.</p></li>
+                    <li><p><i>master</i> - the branch that we want to push to.</p></li>
+                </ul>
+            </li>
+            <li>
+                <p>pull -- Download changes from remote repository to your local machine, the opposite of push</p>
+            </li>
+        </ul>
+    </article>
+    <hr>
+    <article>
+        <h3>SSH Keys</h3>
+        <p>In order to push the changes under our account we have to proof to GitHub that we are "the owners of our
+            account" (connect our local machine to GitHub)</p>
+        <p>How? Using the <strong>SSH KEYS</strong> <br>We have to start by generating a key locally using the
+            ssh-keygen command</p>
+        <p><i>ssh-keygen</i></p>
+        <p>the type of encryption</p>
+        <p><i>ssh-keygen -t rsa</i></p>
+        <p>the strength of encryption</p>
+        <p><i>ssh-keygen -t rsa -b 4096</i></p>
+        <p>and our GitHub email address</p>
+        <p><i>ssh-keygen -t rsa -b 4096 -C "email@example.com"</i></p>
+        <p>Now the default file for the ssh key is inside our user directory in the <i>.ssh/</i> directory and its
+            called <i>id_rsa</i></p>
+        <p>Now the key is generated. If we check our key we find out there is two keys (both the same but one with the
+            extension <i>.pub</i>). Is that one the one we are going to upload to our GitHub interface.</p>
+        <p>We have to print out and copy the public key. It could start with 'ssh-rsa' and it is a very long chain of
+            characters ending with the email linked to our GitHub account</p>
+        <p>Once we have the key on the clipboard, we have to go to GitHub web site > user > settings > SSH and GPG keys
+            > New SHH key > here we have to paste the key.</p>
+        <p>The only thing left to do it's to make sure that our local Git CLI knows about the key we just generated. For
+            that simply follow the steps in the following link <a
+                href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating
+                a new SHH key and adding it to the shh-agent</a></p>
+    </article>
+</body>
+
 </html>

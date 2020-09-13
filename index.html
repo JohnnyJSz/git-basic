@@ -48,32 +48,41 @@
         <h3>Some Git Commands</h3>
         <ul>
             <li>
-                <p><strong><u>clone</u></strong> -- Bring a repository that is hosted somewhere like GitHub into a folder on your local machine.
+                <p><strong><u>clone</u></strong> -- Bring a repository that is hosted somewhere like GitHub into a
+                    folder on your local machine.
                 </p>
                 <p><i>git clone git@github.com/user/repo_example.git</i></p>
             </li>
             <li>
-                <p><strong><u>status</u></strong> -- Shows all the files that were updated, created or deleted but haven't been saved in a commit yet.</p>
+                <p><strong><u>status</u></strong> -- Shows all the files that were updated, created or deleted but
+                    haven't been saved in a commit yet.</p>
                 <p><i>git status</i></p>
             </li>
             <li>
-                <p><strong><u>add</u></strong> -- Track your files and changes before we can save it to Git, we have to tell it which files we want to track</p>
+                <p><strong><u>add</u></strong> -- Track your files and changes before we can save it to Git, we have to
+                    tell it which files we want to track</p>
                 <p><i>git add file_name / git add .</i></p>
             </li>
             <li>
-                <p><strong><u>commit</u></strong> -- Save your files locally, the commit it's not live in GitHub, to do so we use <i>git push</i></p>
+                <p><strong><u>commit</u></strong> -- Save your files locally, the commit it's not live in GitHub, to do
+                    so we use <i>git push</i></p>
                 <p><i>git commit -m 'commit title' -m 'commit description'</i></p>
             </li>
             <li>
                 <p><strong><u>push</u></strong> -- upload Git commits to a remote repository, like GitHub</p>
                 <p><i>git push origin master</i></p>
                 <ul>
-                    <li><p>origin - the location of our Git repository.</p></li>
-                    <li><p>master - the branch that we want to push to.</p></li>
+                    <li>
+                        <p>origin - the location of our Git repository.</p>
+                    </li>
+                    <li>
+                        <p>master - the branch that we want to push to.</p>
+                    </li>
                 </ul>
             </li>
             <li>
-                <p><strong><u>pull</u></strong> -- Download changes from remote repository to your local machine, the opposite of push</p>
+                <p><strong><u>pull</u></strong> -- Download changes from remote repository to your local machine, the
+                    opposite of push</p>
             </li>
         </ul>
     </article>
@@ -106,8 +115,23 @@
     <article>
         <h3>Git Push</h3>
         <p>To push to GitHub we have to type in the Terminal <i>git push origin master</i></p>
-        <p><i>origin</i> is an option set for us here and stands for the location of our git repository</p>
-        <p><i>master</i> is the branch that we want to push to</p>
+        <p><i>origin</i> is an option set for us here and stands for the location of our git repository.</p>
+        <p><i>master</i> is the branch that we want to push to.</p>
+    </article>
+    <article>
+        <h3>Start a repository locally</h3>
+        <p>So far we have been doing commits to practice, that was part of a demonstration of how to create a new git
+            repository using GitHub but what about if we start a repository locally?</p>
+        </br>
+        <p>Lets create a new folder, separated from the previous repository, lets called it
+            <i>demo-repo</i> and lets move into it. Now this is not a Git repository yet, nothing is in there.</p>
+        <p>Lets add a test file and add some content to it.</p>
+        <p>To turn that folder and its content into a git repo we have to type <i>git init</i>.</p>
+        <p>After some changes we follow the same steps to commit <i>status / add / commit / push origin master</i> and we are going to face an error </br> "fatal: 'origin' does not appear to be a git repository" </br> and </br> "fatal: Could not read from remote repository."</p>
+        <p>This is because we created it locally and there is no repo on GitHub to push to, it is not connected to anything. So we have to create that connection.</p>
+        <p>The easiest way to do this is by creating an empty git repo up on github.com, once we have it we need to copy the SSH key, after that we hay to type in the Terminal <i>git remote add origin "shh key from github.com"</i> and then we can check the repositories that we have connected to this repo using the command <i>git remote -v</i></p>
+        <p>Now we have all set up we can use <i>git push origin master</i>, there is a shortcut for that but we have to set something called an <i>upstream</i> meaning this is where I want to push it to by default, we can set the shortcut with <i>git push -u origin master</i> and then the next time in the future we can use <i>git push</i> only.</p>
+        <p>After that if we refresh the github website we will find the repository updated.</p>
     </article>
 </body>
 

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Git Basics</title>
 </head>
@@ -9,16 +10,28 @@
 <body>
     <h1>Git & GitHub Crash Course</h1>
     <h2>FreeCodeCamp & Gwen Faraday</h2>
-    <article>
+    <div class="index">
+        <h3>Index</h3>
+        <ol>
+            <li><a href="#whatIsGit">What is Git?</a></li>
+            <li><a href="#whatIsVersionControlSystem">What is Version Control System?</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#someGitCommands">Some Git Commands</a></li>
+            <li><a href="#sshKeys">SSH Keys</a></li>
+            <li><a href="#gitPush">Git Push</a></li>
+            <li><a href="#startRepositoryLocally">Start a repository locally</a></li>
+        </ol>
+    </div>
+    <article id="whatIsGit">
         <h3>What is Git?</h3>
         <p>A free and open source version control system.</p>
     </article>
-    <article>
+    <article id="whatIsVersionControlSystem">
         <h3>What is Version Control System?</h3>
         <p>The management of changes to documents, computer programs, large web sites and other collections of
             information.</p>
     </article>
-    <article>
+    <article id="terms">
         <h3>Terms</h3>
         <ul>
             <li>
@@ -44,7 +57,7 @@
             </li>
         </ul>
     </article>
-    <article>
+    <article id="someGitCommands">
         <h3>Some Git Commands</h3>
         <ul>
             <li>
@@ -86,7 +99,7 @@
             </li>
         </ul>
     </article>
-    <article>
+    <article id="sshKeys">
         <h3>SSH Keys</h3>
         <p>In order to push the changes under our account we have to proof to GitHub that we are "the owners of our
             account" (connect our local machine to GitHub)</p>
@@ -109,16 +122,16 @@
             > New SHH key > here we have to paste the key.</p>
         <p>The only thing left to do it's to make sure that our local Git CLI knows about the key we just generated. For
             that simply follow the steps in the following link <a
-                href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating
+                href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Generating
                 a new SHH key and adding it to the shh-agent</a></p>
     </article>
-    <article>
+    <article id="gitPush">
         <h3>Git Push</h3>
         <p>To push to GitHub we have to type in the Terminal <i>git push origin master</i></p>
         <p><i>origin</i> is an option set for us here and stands for the location of our git repository.</p>
         <p><i>master</i> is the branch that we want to push to.</p>
     </article>
-    <article>
+    <article id="startRepositoryLocally">
         <h3>Start a repository locally</h3>
         <p>So far we have been doing commits to practice, that was part of a demonstration of how to create a new git
             repository using GitHub but what about if we start a repository locally?</p>

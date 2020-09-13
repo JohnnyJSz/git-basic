@@ -7,14 +7,27 @@
 body {
     font-family: sans-serif;
     color: whitesmoke;
-    background: linear-gradient(45deg, rgb(54, 20, 5), rgb(10, 10, 63));
+    background: linear-gradient(45deg, rgb(119, 54, 27), rgb(10, 10, 63));
     margin: 1rem 2rem;
     
 }
 
+.index {
+    margin: .5rem 3rem;
+}
+
+.index h3 {
+    color: rgb(230, 138, 32);
+    text-decoration: underline;
+}
+
+.index li {
+    padding: .3rem;
+}
+
 article {
-    border: 1px solid rgb(255, 66, 32);
-    border-radius: 20px;
+    border-top: 1px solid rgb(255, 66, 32);
+    border-radius: 10px;
     text-align: left;
     padding: 1rem 2rem;
     margin: 0.5rem auto;
@@ -29,14 +42,40 @@ i {
     color: rgb(255, 130, 72);
 }
 
+a, a:visited {
+    color: rgb(13, 219, 255);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(173, 255, 20);
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+    text-decoration: none;
+}
+
 ul {
     list-style: outside;
     margin: auto 1rem;
 }
 
 h1, h2 {
+    color: rgba(255, 38, 0, 1);
+    text-shadow: 1px 1px 3px rgb(234, 0, 255);
     text-align: center;
     margin: .6rem .2rem;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 200%;
 }
 
 h3 {

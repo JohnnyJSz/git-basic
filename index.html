@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Git & GitHub Crash Course</h1>
+    <h1 id="top">Git & GitHub Crash Course</h1>
     <h2>FreeCodeCamp & Gwen Faraday</h2>
     <div class="index">
         <h3>Index</h3>
@@ -122,7 +123,8 @@
             > New SHH key > here we have to paste the key.</p>
         <p>The only thing left to do it's to make sure that our local Git CLI knows about the key we just generated. For
             that simply follow the steps in the following link <a
-                href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Generating
+                href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+                target="_blank">Generating
                 a new SHH key and adding it to the shh-agent</a></p>
     </article>
     <article id="gitPush">
@@ -140,12 +142,24 @@
             <i>demo-repo</i> and lets move into it. Now this is not a Git repository yet, nothing is in there.</p>
         <p>Lets add a test file and add some content to it.</p>
         <p>To turn that folder and its content into a git repo we have to type <i>git init</i>.</p>
-        <p>After some changes we follow the same steps to commit <i>status / add / commit / push origin master</i> and we are going to face an error </br> "fatal: 'origin' does not appear to be a git repository" </br> and </br> "fatal: Could not read from remote repository."</p>
-        <p>This is because we created it locally and there is no repo on GitHub to push to, it is not connected to anything. So we have to create that connection.</p>
-        <p>The easiest way to do this is by creating an empty git repo up on github.com, once we have it we need to copy the SSH key, after that we hay to type in the Terminal <i>git remote add origin "shh key from github.com"</i> and then we can check the repositories that we have connected to this repo using the command <i>git remote -v</i></p>
-        <p>Now we have all set up we can use <i>git push origin master</i>, there is a shortcut for that but we have to set something called an <i>upstream</i> meaning this is where I want to push it to by default, we can set the shortcut with <i>git push -u origin master</i> and then the next time in the future we can use <i>git push</i> only.</p>
+        <p>After some changes we follow the same steps to commit <i>status / add / commit / push origin master</i> and
+            we are going to face an error </br> "fatal: 'origin' does not appear to be a git repository" </br> and </br>
+            "fatal: Could not read from remote repository."</p>
+        <p>This is because we created it locally and there is no repo on GitHub to push to, it is not connected to
+            anything. So we have to create that connection.</p>
+        <p>The easiest way to do this is by creating an empty git repo up on github.com, once we have it we need to copy
+            the SSH key, after that we hay to type in the Terminal <i>git remote add origin "shh key from
+                github.com"</i> and then we can check the repositories that we have connected to this repo using the
+            command <i>git remote -v</i></p>
+        <p>Now we have all set up we can use <i>git push origin master</i>, there is a shortcut for that but we have to
+            set something called an <i>upstream</i> meaning this is where I want to push it to by default, we can set
+            the shortcut with <i>git push -u origin master</i> and then the next time in the future we can use <i>git
+                push</i> only.</p>
         <p>After that if we refresh the github website we will find the repository updated.</p>
     </article>
+    <a href="#top">
+        <div class="goUp">Up</div>
+    </a>
 </body>
 
 </html>

@@ -7,15 +7,17 @@
 body {
     font-family: sans-serif;
     color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.85);
+    background: linear-gradient(45deg, rgb(54, 20, 5), rgb(10, 10, 63));
+    margin: 1rem 2rem;
+    
 }
 
 article {
     border: 1px solid rgb(255, 66, 32);
     border-radius: 20px;
-    text-align: justify;
+    text-align: left;
     padding: 1rem 2rem;
-    margin: .5rem;
+    margin: 0.5rem auto;
 }
 
 p {
@@ -27,8 +29,14 @@ i {
     color: rgb(255, 130, 72);
 }
 
-h1, h2, h3 {
+ul {
+    list-style: outside;
+    margin: auto 1rem;
+}
+
+h1, h2 {
     text-align: center;
+    margin: .6rem .2rem;
 }
 
 h3 {

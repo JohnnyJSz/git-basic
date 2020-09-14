@@ -19,6 +19,7 @@
             <li><a href="#terms">Terms</a></li>
             <li><a href="#someGitCommands">Some Git Commands</a></li>
             <li><a href="#cloningThroughTerminalVSCode">Cloning through terminal</a></li>
+            <li><a href="gitStatusAddCommit">git status / git add / git commit</a></li>
             <li><a href="#sshKeys">SSH Keys</a></li>
             <li><a href="#gitPush">Git Push</a></li>
             <li><a href="#startRepositoryLocally">Start a repository locally</a></li>
@@ -111,6 +112,16 @@
         <p><i>git clone git@github.com:user/repository_example.git</i></p>
         </br>
         <p>once we do that we can see the folder in the Explorer menu, which is the repository from GitHub, and then we can start working with it.</p>
+    </article>
+    <article id="gitStatusAddCommit">
+        <h3>git status / git add / git commit</h3>
+        <ul>
+            <li><p><i>git status</i> - this command shows us all the files that were created, updated or deleted but haven't been saved in a commit yet</p></li>
+            <li><p><i>git add</i> - this command is for tracking the files and move it virtually to the staged area, the ones that previously checked with git status command. We can track one file adding the name of the file after the <i>add</i> or tracking all the files in the project using a <i>. (dot)</i> right after the add word.</p><p><i>git add index.html</i></p></li>
+            <li><p><i>git commit</i> - this command captures a snapshot of the project's currently staged changes. Committed snapshots can be thought of as 'save' versions of a project.</p><p>We can add a title and a description for the commit using the <i>-m</i> flag followed by the title or description in between quotation marks</p><p><i>git commit -m 'added article' -m 'added a new article with a red background color'</i></p></li>
+        </ul>
+        <p>After this three commands we have still only saved our code locally, the commit isn't live on GitHub yet</p>
+        <p>We make it live using the <i>git push</i> command.</p>
     </article>
     <article id="sshKeys">
         <h3>SSH Keys</h3>

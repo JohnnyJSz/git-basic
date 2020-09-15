@@ -9,7 +9,7 @@ body {
   font-family: sans-serif;
   color: whitesmoke;
   background: linear-gradient(45deg, rgb(119, 54, 27), rgb(10, 10, 63));
-  margin: 1rem auto;
+  margin: 1rem 0 auto auto;
 }
 
 .index {
@@ -86,8 +86,8 @@ h3 {
 }
 
 .goUp {
-  background-color: rgb(94, 9, 104);
-  border: 2px solid rgb(248, 5, 7);
+  background-color: rgb(20, 11, 44);
+  border: 1px solid rgb(248, 5, 7);
   border-top-left-radius: 45%;
   border-top-right-radius: 45%;
   width: 2rem;
@@ -96,8 +96,8 @@ h3 {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 5vh;
-  right: 5vw;
+  bottom: 2rem;
+  right: 2rem;
   opacity: 0.5;
   transition: height 0.3s;
   cursor: pointer;
@@ -111,4 +111,12 @@ h3 {
 a .goUp {
   text-decoration: none;
   color: rgb(248, 5, 7);
+}
+
+footer {
+    background-color: rgb(20, 11, 44);
+    height: 2rem;
+    border-top: 1px solid rgb(248, 5, 7);
+    display: flex;
+    justify-content: center;
 }

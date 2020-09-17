@@ -13,7 +13,7 @@ body {
 }
 
 .index {
-  margin: 0.5rem 3rem;
+  margin: 2rem 3rem;
 }
 
 .index h3 {
@@ -114,10 +114,28 @@ a .goUp {
 }
 
 footer {
-    background-color: rgb(20, 11, 44);
-    height: 2rem;
-    border-top: 1px solid rgb(248, 5, 7);
-    display: flex;
-    justify-content: center;
-    color: whitesmoke;
+  background-color: rgb(20, 11, 44);
+  height: 2rem;
+  border-top: 1px solid rgb(248, 5, 7);
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 200%;
+    margin-top: 5vh;
+  }
+
+  h2 {
+    font-size: 150%;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+  }
+
+  .goUp {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

@@ -26,6 +26,7 @@
             <li><a href="#sshKeys">SSH Keys</a></li>
             <li><a href="#gitPush">Git Push</a></li>
             <li><a href="#startRepositoryLocally">Start a repository locally</a></li>
+            <li><a href="#gitBranching">Git Branching</a></li>
         </ol>
     </div>
     <article id="whatIsGit">
@@ -182,6 +183,14 @@
             the shortcut with <i>git push -u origin master</i> and then the next time in the future we can use <i>git
                 push</i> only.</p>
         <p>After that if we refresh the github website we will find the repository updated.</p>
+    </article>
+    <article id="gitBranching">
+        <h3>Git Branching</h3>
+        <p>When we have a project and we are developing more and more features, ideally for every of those features we create a separate branch to apply our new changes, to testing, etc... without touching the main code and potentially broke the whole project. If those changes are the approved final ones, then we merge that feature branch to our main branch, so in the main branch we always have an stable version of our project and at the same time we can work on more features in alternative separate branches.</p>
+        <ul>
+            <li><p><i>Master branch</i> - Is the naming convention for the main or the default branch in a repository, where the project "lives". Ideally Master is not meant to work directly on it but if we only work in one branch, this is where our code and all our commits will be.</p></li>
+            <li><p><i>Feature branch</i> - When we create a feature branch the code on Master and Feature branch will be the same but as we make updates in the feature branch those changes are only seen in the feature branch, so we have to commit to saving those changes onto that branch. At this point if we switch back to the Master branch we won't be able to see any of the changes we made on Feature, that is because we have been working in an alternative branch, the code on both are different because the branches are not in sync yet. Once we are happy with our work in Feature then we can merge it with Master and have the project update with the latest features we or our team have been worked on it.</p></li>
+        </ul>
     </article>
     <a href="#top">
         <div class="goUp">Up</div>

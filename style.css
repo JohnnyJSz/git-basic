@@ -12,6 +12,23 @@ body {
   margin: 1rem 0 auto auto;
 }
 
+nav {
+    height: 10vh;
+    background: green;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
 .index {
   margin: 2rem 3rem;
 }

@@ -4,14 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Git Basics</title>
 </head>
 
 <body>
-    <div>
-        here the burger menu
-    </div>
+    <nav>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <ul class="nav-links">
+                <li><a href="#whatIsGit">What is Git?</a></li>
+                <li><a href="#whatIsVersionControlSystem">What is Version Control System?</a></li>
+                <li><a href="#terms">Terms</a></li>
+                <li><a href="#someGitCommands">Some Git Commands</a></li>
+                <li><a href="#cloningThroughTerminalVSCode">Cloning through terminal</a></li>
+                <li><a href="#gitStatusAddCommit">git status / git add / git commit</a></li>
+                <li><a href="#sshKeys">SSH Keys</a></li>
+                <li><a href="#gitPush">Git Push</a></li>
+                <li><a href="#startRepositoryLocally">Start a repository locally</a></li>
+                <li><a href="#gitBranching">Git Branching</a></li>
+            </ul>
+        </div>
+    </nav>
     <h1 id="top">Git & GitHub Crash Course</h1>
     <h2>FreeCodeCamp & Gwen Faraday</h2>
     <div class="index">
@@ -115,14 +132,30 @@
         </br>
         <p><i>git clone git@github.com:user/repository_example.git</i></p>
         </br>
-        <p>once we do that we can see the folder in the Explorer menu, which is the repository from GitHub, and then we can start working with it.</p>
+        <p>once we do that we can see the folder in the Explorer menu, which is the repository from GitHub, and then we
+            can start working with it.</p>
     </article>
     <article id="gitStatusAddCommit">
         <h3>git status / git add / git commit</h3>
         <ul>
-            <li><p><i>git status</i> - this command shows us all the files that were created, updated or deleted but haven't been saved in a commit yet</p></li>
-            <li><p><i>git add</i> - this command is for tracking the files and move it virtually to the staged area, the ones that previously checked with git status command. We can track one file adding the name of the file after the <i>add</i> or tracking all the files in the project using a <i>. (dot)</i> right after the add word.</p><p><i>git add index.html</i></p></li>
-            <li><p><i>git commit</i> - this command captures a snapshot of the project's currently staged changes. Committed snapshots can be thought of as 'save' versions of a project.</p><p>We can add a title and a description for the commit using the <i>-m</i> flag followed by the title or description in between quotation marks</p><p><i>git commit -m 'added article' -m 'added a new article with a red background color'</i></p></li>
+            <li>
+                <p><i>git status</i> - this command shows us all the files that were created, updated or deleted but
+                    haven't been saved in a commit yet</p>
+            </li>
+            <li>
+                <p><i>git add</i> - this command is for tracking the files and move it virtually to the staged area, the
+                    ones that previously checked with git status command. We can track one file adding the name of the
+                    file after the <i>add</i> or tracking all the files in the project using a <i>. (dot)</i> right
+                    after the add word.</p>
+                <p><i>git add index.html</i></p>
+            </li>
+            <li>
+                <p><i>git commit</i> - this command captures a snapshot of the project's currently staged changes.
+                    Committed snapshots can be thought of as 'save' versions of a project.</p>
+                <p>We can add a title and a description for the commit using the <i>-m</i> flag followed by the title or
+                    description in between quotation marks</p>
+                <p><i>git commit -m 'added article' -m 'added a new article with a red background color'</i></p>
+            </li>
         </ul>
         <p>After this three commands we have still only saved our code locally, the commit isn't live on GitHub yet</p>
         <p>We make it live using the <i>git push</i> command.</p>
@@ -186,20 +219,57 @@
     </article>
     <article id="gitBranching">
         <h3>Git Branching</h3>
-        <p>When we have a project and we are developing more and more features, ideally for every of those features we create a separate branch to apply our new changes, to testing, etc... without touching the main code and potentially broke the whole project. If those changes are the approved final ones, then we merge that feature branch to our main branch, so in the main branch we always have an stable version of our project and at the same time we can work on more features in alternative separate branches.</p>
+        <p>When we have a project and we are developing more and more features, ideally for every of those features we
+            create a separate branch to apply our new changes, to testing, etc... without touching the main code and
+            potentially broke the whole project. If those changes are the approved final ones, then we merge that
+            feature branch to our main branch, so in the main branch we always have an stable version of our project and
+            at the same time we can work on more features in alternative separate branches.</p>
         <ul>
-            <li><p><i>Master branch</i> - Is the naming convention for the main or the default branch in a repository, where the project "lives". Ideally Master is not meant to work directly on it but if we only work in one branch, this is where our code and all our commits will be.</p></li>
-            <li><p><i>Feature branch</i> - When we create a feature branch the code on Master and Feature branch will be the same but as we make updates in the feature branch those changes are only seen in the feature branch, so we have to commit to saving those changes onto that branch. At this point if we switch back to the Master branch we won't be able to see any of the changes we made on Feature, that is because we have been working in an alternative branch, the code on both are different because the branches are not in sync yet. Once we are happy with our work in Feature then we can merge it with Master and have the project update with the latest features we or our team have been worked on it.</p></li>
+            <li>
+                <p><i>Master branch</i> - Is the naming convention for the main or the default branch in a repository,
+                    where the project "lives". Ideally Master is not meant to work directly on it but if we only work in
+                    one branch, this is where our code and all our commits will be.</p>
+            </li>
+            <li>
+                <p><i>Feature branch</i> - When we create a feature branch the code on Master and Feature branch will be
+                    the same but as we make updates in the feature branch those changes are only seen in the feature
+                    branch, so we have to commit to saving those changes onto that branch. At this point if we switch
+                    back to the Master branch we won't be able to see any of the changes we made on Feature, that is
+                    because we have been working in an alternative branch, the code on both are different because the
+                    branches are not in sync yet. Once we are happy with our work in Feature then we can merge it with
+                    Master and have the project update with the latest features we or our team have been worked on it.
+                </p>
+            </li>
         </ul>
         <p>Lets see some git branching command lines</p>
         <ul>
-            <li><p><i>git branch</i> : this shows us how many branch we have active and in which one we are at the moment (the one with the * symbol)</p></li>
-            <li><p><i>git checkout -b branch_feature_a</i> : this is the command line to create a new branch, in this case the name will be branch_feature_a and we will be moved onto that branch</p></li>
-            <li><p><i>git checkout branch_feature_a</i> : this command is to switch between branches, we will switch to the branch we specified in this command.</p></li>
-            <li><p><i>git branch -d branch_feature_b</i> : this command is for when we want to delete a branch</p></li>
-            <li><p><i>git diff branch_feature_a</i> : shows us what changes have been made. It compares two versions of the code and shows us all of the lines that have been changed</p></li>
-            <li><p><i>git merge</i></p></li>
-            <li><p><i>git pull origin master</i> : when the changes are only on GitHub then we need to pull them down to our local machine. So to get the changes on our local master branch from origin we have to use this command</p></li>
+            <li>
+                <p><i>git branch</i> : this shows us how many branch we have active and in which one we are at the
+                    moment (the one with the * symbol)</p>
+            </li>
+            <li>
+                <p><i>git checkout -b branch_feature_a</i> : this is the command line to create a new branch, in this
+                    case the name will be branch_feature_a and we will be moved onto that branch</p>
+            </li>
+            <li>
+                <p><i>git checkout branch_feature_a</i> : this command is to switch between branches, we will switch to
+                    the branch we specified in this command.</p>
+            </li>
+            <li>
+                <p><i>git branch -d branch_feature_b</i> : this command is for when we want to delete a branch</p>
+            </li>
+            <li>
+                <p><i>git diff branch_feature_a</i> : shows us what changes have been made. It compares two versions of
+                    the code and shows us all of the lines that have been changed</p>
+            </li>
+            <li>
+                <p><i>git merge</i></p>
+            </li>
+            <li>
+                <p><i>git pull origin master</i> : when the changes are only on GitHub then we need to pull them down to
+                    our local machine. So to get the changes on our local master branch from origin we have to use this
+                    command</p>
+            </li>
         </ul>
     </article>
     <a href="#top">
